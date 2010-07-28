@@ -1,0 +1,14 @@
+28/07/2010
+get page_data to get the page meta info
+
+then build
+page by getting all page_blocks , order them and
+then rendering the bocks according to the
+page_module definations
+
+
+so far , it gets the page_data , then retrieves the
+page_block data.
+
+Now I need to write some page_modules to handle the data.
+
