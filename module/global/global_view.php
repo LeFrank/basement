@@ -7,7 +7,7 @@
 
 class global_view{
 
-    public $title_name , $css_arr , $js_arr = null;
+    public $title_name , $css_arr , $js_arr , $keywords = null ;
 
     function global_view(){
         $this->smarty = new Smarty;
