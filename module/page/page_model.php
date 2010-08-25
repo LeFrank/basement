@@ -27,7 +27,7 @@ class page_model extends global_model{
         return $result;
     }
 
-    function get_page($page_id=false){
+    function get_page($page_id="0"){
         if($page_id == "0"){
                 $sql = "SELECT * FROM page_data where id = ". $page_id;
                 $sql_arr = $this->sql->_selectSingle($sql);
@@ -38,7 +38,7 @@ class page_model extends global_model{
                 }
                 return $sql_arr;
         }else{
-            echo "failed";
+            echo "failed there";
             exit;
         }
     }
