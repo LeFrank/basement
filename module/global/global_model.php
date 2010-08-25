@@ -6,10 +6,9 @@
 
 class global_model{
 
+    var $sql = null;
+
     function global_model(){
-
+        $this->sql = new SQL();
     }
-    function __default(){
-    }
-
 }
