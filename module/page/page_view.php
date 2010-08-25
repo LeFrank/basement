@@ -41,12 +41,15 @@ class page_view  extends global_view{
 
     function show_page($page_data=false){
         if($page_data){
-            //print_r($page_data);
+//            echo "<pre>";
+//            print_r($page_data);
+//            echo "</pre>";
             $page_value =  $page_data['value'];
             $this->title     = $page_value['title'];
             $this->load_header();
+            $this->smarty->assign("page_blocks" , $page_data["page_block_data"]["value"]["page_blocks"]);
 
-            //$this->smarty->display(DOC_ROOT.'module/page/tpl/page_default.tpl');
+            $this->smarty->display(DOC_ROOT.'module/page/tpl/ttmp_page.tpl');
         }
 
     }
