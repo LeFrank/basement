@@ -24,7 +24,10 @@ class page_controller extends global_controller{
 //        print_r($page_data);
         $pbc = new page_block_controller();
         $page_block = $pbc->get_page_block($page_data["value"][id]);
-        $page_data["page_block"] = $page_block;
+        $page_data["page_block_data"] = $page_block;
+//        echo "<pre>";
+//        print_r($page_data["page_blocks"]);
+//        echo "</pre>";
         $this->pv->show_page($page_data);
     }
 
