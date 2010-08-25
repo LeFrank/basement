@@ -218,10 +218,10 @@
                             navigation: "permanent",
                             direction:  "left"
                         }
-                var options3 = {
-                                    caption:    "permanent",
-                                    opacity:    1
-                                }
+        var options3 = {
+                          caption:    "permanent",
+                          opacity:    1
+                       }
         $("#ppy1").popeye();
         $("#ppy2").popeye();
         $("#ppy3").popeye();
