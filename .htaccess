@@ -10,6 +10,6 @@ RewriteRule ^(.*) /$1/ [R=301]
 
 RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/$ index.php?module=$1&event=$2 [NE,NC,L]
 RewriteRule ^(.*)/$ /index.php?module=$1 [NE,NC,L]
-RewriteRule ^ADMIN/(.*)/$ /admin/index.php?page=$1 [NE,NC,L]
+RewriteRule ^admin/$ /?module=admin [NE,NC,L]
 
 #RewriteRule ^property-one-liners/office/(\d+)/(\d+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/$ index.php?page=property_one_liners&officeid=$1&result_page=$2&order_subject=$3&order_by=$4 [NE,NC,L]

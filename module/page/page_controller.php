@@ -20,14 +20,23 @@ class page_controller extends global_controller{
     function __default(){
         //display page
         $this->pv = new page_view();
-        $page_data = $this->pm->get_home_page();
-//        print_r($page_data);
-        $pbc = new page_block_controller();
-        $page_block = $pbc->get_page_block($page_data["value"][id]);
-        $page_data["page_block_data"] = $page_block;
-//        echo "<pre>";
-//        print_r($page_data["page_blocks"]);
-//        echo "</pre>";
+        switch(true){
+            case is_numeric($_GET['page']):
+                $page_data = $this->pm->get_page($_GET['page']);
+                $pbc = new page_block_controller();
+                $page_block = $pbc->get_page_block($page_data["value"][id]);
+                $page_data["page_block_data"] = $page_block;
+                break;
+            default:
+                $page_data = $this->pm->get_home_page();
+//                print_r($page_data);
+                $pbc = new page_block_controller();
+                $page_block = $pbc->get_page_block($page_data["value"][id]);
+                $page_data["page_block_data"] = $page_block;
+                //echo "<pre>";
+                //print_r($page_data["page_blocks"]);
+                //echo "</pre>";
+        }
         $this->pv->show_page($page_data);
     }
 
@@ -45,5 +54,12 @@ class page_controller extends global_controller{
         
     }
 
+    function admin_show_pages(){
+        if(isset($_SESSION["is_admin"])){
+            $this->pm->get_pages
+
+
+        }
+    }
 }
 ?>

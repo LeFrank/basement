@@ -6,7 +6,7 @@ require_once("./config/initialize.php");
 
 $ad_data_array = $_REQUEST;
 
-
+print_r($_GET);
 if (isset($_GET['module'])) {
       $module = $_GET['module'];
       if (isset($_GET['event'])) {
@@ -20,7 +20,7 @@ if (isset($_GET['module'])) {
       } else {
           $class = $module."_controller";
       }
-      $classFile = DOC_ROOT.'/module/'.$module.'/'.$class.'.php';
+      $classFile = DOC_ROOT.'module/'.$module.'/'.$class.'.php';
       if (file_exists($classFile)) {
           require_once($classFile);
           if (class_exists($class)) {

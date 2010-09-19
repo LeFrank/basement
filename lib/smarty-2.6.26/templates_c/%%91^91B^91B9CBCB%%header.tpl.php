@@ -1,13 +1,14 @@
-<?php /* Smarty version 2.6.26, created on 2010-05-28 09:36:57
+<?php /* Smarty version 2.6.26, created on 2010-07-28 23:42:04
          compiled from /home/francois/dev/the_blog/module/global_template/header.tpl */ ?>
 <!doctype html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <link rel="alternate" type="application/rss+xml" title="Here Now" href="http://the_blog.localhost/" />
         <meta name="description" content="Here Now , find yourself in the moment, examples and technologies from those who use them." />
-        <meta name="keywords" content="LeFrank" />
+        <meta name="keywords" content="<?php echo $this->_tpl_vars['keywords']; ?>
+" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <title>Here Now - <?php echo $this->_tpl_vars['title_name']; ?>
+        <title><?php echo $this->_tpl_vars['title_name']; ?>
 </title>
         <meta name="viewport" content="width=device-width" />
         <?php unset($this->_sections['css_array']);

@@ -7,12 +7,12 @@
 
 class global_view{
 
-    public $title_name , $css_arr , $js_arr , $keywords = null ;
+    public $domain_name , $title_name , $css_arr , $js_arr , $keywords = null ;
 
     function global_view(){
         $this->smarty = new Smarty;
         $this->smarty->compile_check = true;
-
+        $this->domain_name = $_SERVER['SERVER_NAME'];
         $this->css_arr  = array( "http://".$_SERVER['SERVER_NAME']."/"."lib/css/style.css");
         $this->js_arr   = array( "http://".$_SERVER['SERVER_NAME']."/"."lib/js/here_now.js" ,
                                  "http://".$_SERVER['SERVER_NAME']."/"."lib/js/framework/jquery/jquery-1.4.2.min.js");
